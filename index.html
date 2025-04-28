@@ -1,0 +1,135 @@
+<!DOCTYPE html><html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Proyecto Reciclaje</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f0f9f0;
+      color: #2e2e2e;
+    }
+    header {
+      background: linear-gradient(90deg, #4caf50, #2196f3, #ffeb3b);
+      color: white;
+      padding: 2rem;
+      text-align: center;
+      animation: fadeIn 2s ease-in;
+    }
+    .presentacion {
+      padding: 2rem;
+      text-align: center;
+      animation: slideIn 1.5s ease-out;
+    }
+    .presentacion ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem 1rem;
+    }
+    .presentacion ul li {
+      background-color: #dff0d8;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .contador {
+      font-size: 2rem;
+      font-weight: bold;
+      margin: 1rem 0;
+      color: #388e3c;
+    }
+    .input-container {
+      margin-top: 1rem;
+    }
+    input[type="number"] {
+      padding: 0.5rem;
+      font-size: 1rem;
+      width: 100px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      text-align: center;
+    }
+    .iconos {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 2rem;
+      flex-wrap: wrap;
+      animation: fadeIn 2s ease-in;
+    }
+    .iconos img {
+      width: 80px;
+      height: 80px;
+      transition: transform 0.3s ease;
+    }
+    .iconos img:hover {
+      transform: scale(1.1);
+    }
+    .imagenes {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      padding: 2rem;
+      animation: fadeIn 2s ease-in;
+    }
+    .imagenes img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .imagenes img:hover {
+      transform: scale(1.05);
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes slideIn {
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    @media (max-width: 600px) {
+      header, .presentacion {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Proyecto Reciclaje</h1>
+    <p>Concientización y acción por un mundo más limpio</p>
+  </header>  <section class="presentacion">
+    <h2>Bienvenidos</h2>
+    <p>Este proyecto tiene como objetivo fomentar el reciclaje y el cuidado del medio ambiente.</p>
+    <h3>Conteo de latas</h3>
+    <div class="input-container">
+    </div>
+    <ul>
+      <li>1A=0</li><li>1B=0</li><li>1C=0</li><li>1D=0</li><li>1E=0</li>
+      <li>2A=0</li><li>2B=0</li><li>2C=0</li><li>2D=0</li><li>2E=0</li>
+      <li>3A Economía=0</li><li>3B Economía=0</li><li>3A Naturales=0</li><li>3B Naturales=0</li>
+      <li>4B Economía=0</li><li>4A Naturales=0</li><li>4B Naturales=0</li>
+      <li>5A Economía=0</li><li>5B Economía=0</li><li>5A Naturales=0</li><li>5B Naturales=0</li>
+    </ul>
+ 
+  </section>  <section class="imagenes">
+    <img src="https://i.pinimg.com/736x/be/08/2a/be082aa33c4e2a130d96c49db73b5251.jpg" alt="Reciclaje papel y cartón">
+    <img src="https://i.pinimg.com/736x/66/db/cb/66dbcbb7f70864efa5e4e8097e865a28.jpg" alt="Botellas para reciclar">
+    <img src="https://i.pinimg.com/736x/e6/d3/90/e6d390547b14511a4d058b4bc24f79ec.jpg" alt="Contenedor de reciclaje">
+  </section>  <script>
+    const input = document.getElementById('inputLatas');
+    const contador = document.getElementById('contador');
+
+    input.addEventListener('input', () => {
+      contador.textContent = input.value || 0;
+    });
+  </script></body>
+</html>
